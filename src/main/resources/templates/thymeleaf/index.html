@@ -1,14 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-         pageEncoding="UTF-8"%>
+<!DOCTYPE html>
 <html lang="en">
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-
-<%
-    String path = request.getContextPath();
-    String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
-%>
-<base href="<%=basePath%>">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,15 +10,15 @@
     <!-- load stylesheets -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">  
     <!-- Google web font "Open Sans" -->
-    <link rel="stylesheet" href="font-awesome-4.5.0/css/font-awesome.min.css">                
+    <link rel="stylesheet" href="../../static/font-awesome-4.5.0/css/font-awesome.min.css">
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">                                      
+    <link rel="stylesheet" href="../../static/css/bootstrap.min.css">
     <!-- Bootstrap style -->
-    <link rel="stylesheet" href="css/hero-slider-style.css">                              
+    <link rel="stylesheet" href="../../static/css/hero-slider-style.css">
     <!-- Hero slider style (https://codyhouse.co/gem/hero-slider/) -->
-    <link rel="stylesheet" href="css/magnific-popup.css">                                 
+    <link rel="stylesheet" href="../../static/css/magnific-popup.css">
     <!-- Magnific popup style (http://dimsemenov.com/plugins/magnific-popup/) -->
-    <link rel="stylesheet" href="css/tooplate-style.css">                                   
+    <link rel="stylesheet" href="../../static/css/tooplate-style.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -40,7 +31,7 @@
     <body>
         
         <!-- Content -->
-        <div class="cd-hero" style="overflow-x:scroll">
+        <div class="cd-hero">
 
             <!-- Navigation -->        
             <div class="cd-slider-nav">
@@ -93,7 +84,7 @@
                                     <!--</div>-->
                                     <div class="grid-item">
                                         <figure class="effect-bubba1">
-                                            <img src="img/tm-img-01.jpg" alt="Image" class="img-fluid tm-img">
+                                            <img src="../../static/img/tm-img-01.jpg" alt="Image" class="img-fluid tm-img">
                                             <!--<figcaption>-->
                                                 <!--<h2 class="tm-figure-title">Image <span>One</span></h2>-->
                                                 <!--<p class="tm-figure-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>-->
@@ -103,7 +94,7 @@
                                     </div>
                                     <div class="grid-item">
                                         <figure class="effect-bubba1">
-                                            <img src="img/tm-img-11.jpg" alt="Image" class="img-fluid tm-img">
+                                            <img src="../../static/img/tm-img-11.jpg" alt="Image" class="img-fluid tm-img">
                                             <!--<figcaption>-->
                                                 <!--<h2 class="tm-figure-title">Image <span>Two</span></h2>-->
                                                 <!--<p class="tm-figure-description">Maecenas purus sem, lobortis id odio in sapien.</p>-->
@@ -113,7 +104,7 @@
                                     </div>
                                     <div class="grid-item">
                                         <figure class="effect-bubba1">
-                                            <img src="img/tm-img-14.jpg" alt="Image" class="img-fluid tm-img">
+                                            <img src="../../static/img/tm-img-14.jpg" alt="Image" class="img-fluid tm-img">
                                             <!--<figcaption>-->
                                                 <!--<h2 class="tm-figure-title">Image <span>Three</span></h2>-->
                                                 <!--<p class="tm-figure-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>-->
@@ -123,7 +114,7 @@
                                     </div>
                                     <div class="grid-item">
                                         <figure class="effect-bubba11">
-                                            <img src="img/tm-img-04.jpg" alt="Image" class="img-fluid tm-img">
+                                            <img src="../../static/img/tm-img-04.jpg" alt="Image" class="img-fluid tm-img">
                                             <!--<figcaption>-->
                                                 <!--<h2 class="tm-figure-title">Image <span>Four</span></h2>-->
                                                 <!--<p class="tm-figure-description">Maecenas purus sem, lobortis id odio in sapien.</p>-->
@@ -133,7 +124,7 @@
                                     </div>  
                                     <div class="grid-item">
                                         <figure class="effect-bubba1">
-                                            <img src="img/tm-img-05.jpg" alt="Image" class="img-fluid tm-img">
+                                            <img src="../../static/img/tm-img-05.jpg" alt="Image" class="img-fluid tm-img">
                                             <!--<figcaption>-->
                                                 <!--<h2 class="tm-figure-title">Image <span>Five</span></h2>-->
                                                 <!--<p class="tm-figure-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>-->
@@ -143,7 +134,7 @@
                                     </div>
                                     <div class="grid-item">
                                         <figure class="effect-bubba1">
-                                            <img src="img/tm-img-06.jpg" alt="Image" class="img-fluid tm-img">
+                                            <img src="../../static/img/tm-img-06.jpg" alt="Image" class="img-fluid tm-img">
                                             <!--<figcaption>-->
                                                 <!--<h2 class="tm-figure-title">Image <span>Six</span></h2>-->
                                                 <!--<p class="tm-figure-description">Maecenas purus sem, lobortis id odio in sapien.</p>-->
@@ -153,7 +144,7 @@
                                     </div>
                                     <div class="grid-item">
                                         <figure class="effect-bubba1">
-                                            <img src="img/tm-img-07.jpg" alt="Image" class="img-fluid tm-img">
+                                            <img src="../../static/img/tm-img-07.jpg" alt="Image" class="img-fluid tm-img">
                                             <!--<figcaption>-->
                                                 <!--<h2 class="tm-figure-title">Image <span>Seven</span></h2>-->
                                                 <!--<p class="tm-figure-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>-->
@@ -163,7 +154,7 @@
                                     </div>
                                     <div class="grid-item">
                                         <figure class="effect-bubba1">
-                                            <img src="img/tm-img-08.jpg" alt="Image" class="img-fluid tm-img">
+                                            <img src="../../static/img/tm-img-08.jpg" alt="Image" class="img-fluid tm-img">
                                             <!--<figcaption>-->
                                                 <!--<h2 class="tm-figure-title">Image <span>Eight</span></h2>-->
                                                 <!--<p class="tm-figure-description">Maecenas purus sem, lobortis id odio in sapien.</p>-->
@@ -173,7 +164,7 @@
                                     </div>   
                                     <div class="grid-item">
                                         <figure class="effect-bubba1">
-                                            <img src="img/tm-img-09.jpg" alt="Image" class="img-fluid tm-img">
+                                            <img src="../../static/img/tm-img-09.jpg" alt="Image" class="img-fluid tm-img">
                                             <!--<figcaption>-->
                                                 <!--<h2 class="tm-figure-title">Image <span>Nine</span></h2>-->
                                                 <!--<p class="tm-figure-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>-->
@@ -183,7 +174,7 @@
                                     </div>
                                     <div class="grid-item">
                                         <figure class="effect-bubba1">
-                                            <img src="img/tm-img-10.jpg" alt="Image" class="img-fluid tm-img">
+                                            <img src="../../static/img/tm-img-10.jpg" alt="Image" class="img-fluid tm-img">
                                             <!--<figcaption>-->
                                                 <!--<h2 class="tm-figure-title">Image <span>Ten</span></h2>-->
                                                 <!--<p class="tm-figure-description">Maecenas purus sem, lobortis id odio in sapien.</p>-->
@@ -193,7 +184,7 @@
                                     </div>
                                     <div class="grid-item">
                                         <figure class="effect-bubba1">
-                                            <img src="img/tm-img-11.jpg" alt="Image" class="img-fluid tm-img">
+                                            <img src="../../static/img/tm-img-11.jpg" alt="Image" class="img-fluid tm-img">
                                             <!--<figcaption>-->
                                                 <!--<h2 class="tm-figure-title">Image <span>Eleven</span></h2>-->
                                                 <!--<p class="tm-figure-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>-->
@@ -203,7 +194,7 @@
                                     </div>
                                     <div class="grid-item">
                                         <figure class="effect-bubba1">
-                                            <img src="img/tm-img-12.jpg" alt="Image" class="img-fluid tm-img">
+                                            <img src="../../static/img/tm-img-12.jpg" alt="Image" class="img-fluid tm-img">
                                             <!--<figcaption>-->
                                                 <!--<h2 class="tm-figure-title">Image <span>Twelve</span></h2>-->
                                                 <!--<p class="tm-figure-description">Maecenas purus sem, lobortis id odio in sapien.</p>-->
@@ -213,7 +204,7 @@
                                     </div>
                                     <div class="grid-item">
                                         <figure class="effect-bubba1">
-                                            <img src="img/tm-img-13.jpg" alt="Image" class="img-fluid tm-img">
+                                            <img src="../../static/img/tm-img-13.jpg" alt="Image" class="img-fluid tm-img">
                                             <!--<figcaption>-->
                                                 <!--<h2 class="tm-figure-title">Image <span>Thirteen</span></h2>-->
                                                 <!--<p class="tm-figure-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>-->
@@ -223,7 +214,7 @@
                                     </div>
                                     <div class="grid-item">
                                         <figure class="effect-bubba1">
-                                            <img src="img/tm-img-14.jpg" alt="Image" class="img-fluid tm-img">
+                                            <img src="../../static/img/tm-img-14.jpg" alt="Image" class="img-fluid tm-img">
                                             <!--<figcaption>-->
                                                 <!--<h2 class="tm-figure-title">Image <span>Fourteen</span></h2>-->
                                                 <!--<p class="tm-figure-description">Maecenas purus sem, lobortis id odio in sapien.</p>-->
@@ -233,7 +224,7 @@
                                     </div>
                                     <div class="grid-item">
                                         <figure class="effect-bubba1">
-                                            <img src="img/tm-img-15.jpg" alt="Image" class="img-fluid tm-img">
+                                            <img src="../../static/img/tm-img-15.jpg" alt="Image" class="img-fluid tm-img">
                                             <!--<figcaption>-->
                                                 <!--<h2 class="tm-figure-title">Image <span>Fifteen</span></h2>-->
                                                 <!--<p class="tm-figure-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>-->
@@ -243,7 +234,7 @@
                                     </div>
                                     <div class="grid-item">
                                         <figure class="effect-bubba1">
-                                            <img src="img/tm-img-16.jpg" alt="Image" class="img-fluid tm-img">
+                                            <img src="../../static/img/tm-img-16.jpg" alt="Image" class="img-fluid tm-img">
                                             <!--<figcaption>-->
                                                 <!--<h2 class="tm-figure-title">Image <span>Sixteen</span></h2>-->
                                                 <!--<p class="tm-figure-description">Maecenas purus sem, lobortis id odio in sapien.</p>-->
@@ -273,7 +264,7 @@
                                     <!--</div>-->
                                     <div class="grid-item">
                                         <figure class="effect-bubba">
-                                            <img src="img/tm-img-17.jpg" alt="Image" class="img-fluid tm-img">
+                                            <img src="../../static/img/tm-img-17.jpg" alt="Image" class="img-fluid tm-img">
                                             <figcaption>
                                                 <h2 class="tm-figure-title">Picture <span>One</span></h2>
                                                 <!--<p class="tm-figure-description">Suspendisse id placerat risus. Mauris quis luctus risus.</p>-->
@@ -283,7 +274,7 @@
                                     </div>
                                     <div class="grid-item">
                                         <figure class="effect-bubba">
-                                            <img src="img/tm-img-18.jpg" alt="Image" class="img-fluid tm-img">
+                                            <img src="../../static/img/tm-img-18.jpg" alt="Image" class="img-fluid tm-img">
                                             <figcaption>
                                                 <h2 class="tm-figure-title">Picture <span>Two</span></h2>
                                                 <!--<p class="tm-figure-description">Maecenas purus sem, lobortis id odio in sapien.</p>-->
@@ -293,7 +284,7 @@
                                     </div>
                                     <div class="grid-item">
                                         <figure class="effect-bubba">
-                                            <img src="img/tm-img-19.jpg" alt="Image" class="img-fluid tm-img">
+                                            <img src="../../static/img/tm-img-19.jpg" alt="Image" class="img-fluid tm-img">
                                             <figcaption>
                                                 <h2 class="tm-figure-title">Picture <span>Three</span></h2>
                                                 <!--<p class="tm-figure-description">Suspendisse id placerat risus. Mauris quis luctus risus.</p>-->
@@ -303,7 +294,7 @@
                                     </div>
                                     <div class="grid-item">
                                         <figure class="effect-bubba">
-                                            <img src="img/tm-img-20.jpg" alt="Image" class="img-fluid tm-img">
+                                            <img src="../../static/img/tm-img-20.jpg" alt="Image" class="img-fluid tm-img">
                                             <figcaption>
                                                 <h2 class="tm-figure-title">Picture <span>Four</span></h2>
                                                 <!--<p class="tm-figure-description">Maecenas purus sem, lobortis id odio in sapien.</p>-->
@@ -313,7 +304,7 @@
                                     </div>
                                     <div class="grid-item">
                                         <figure class="effect-bubba">
-                                            <img src="img/tm-img-28.jpg" alt="Image" class="img-fluid tm-img">
+                                            <img src="../../static/img/tm-img-28.jpg" alt="Image" class="img-fluid tm-img">
                                             <figcaption>
                                                 <h2 class="tm-figure-title">Picture <span>Five</span></h2>
                                                 <!--<p class="tm-figure-description">Suspendisse id placerat risus. Mauris quis luctus risus.</p>-->
@@ -323,7 +314,7 @@
                                     </div>
                                     <div class="grid-item">
                                         <figure class="effect-bubba">
-                                            <img src="img/tm-img-22.jpg" alt="Image" class="img-fluid tm-img">
+                                            <img src="../../static/img/tm-img-22.jpg" alt="Image" class="img-fluid tm-img">
                                             <figcaption>
                                                 <h2 class="tm-figure-title">Picture <span>Six</span></h2>
                                                 <!--<p class="tm-figure-description">Maecenas purus sem, lobortis id odio in sapien.</p>-->
@@ -333,7 +324,7 @@
                                     </div>  
                                     <div class="grid-item">
                                         <figure class="effect-bubba">
-                                            <img src="img/tm-img-23.jpg" alt="Image" class="img-fluid tm-img">
+                                            <img src="../../static/img/tm-img-23.jpg" alt="Image" class="img-fluid tm-img">
                                             <figcaption>
                                                 <h2 class="tm-figure-title">Picture <span>Seven</span></h2>
                                                 <!--<p class="tm-figure-description">Maecenas purus sem, lobortis id odio in sapien.</p>-->
@@ -343,7 +334,7 @@
                                     </div>  
                                     <div class="grid-item">
                                         <figure class="effect-bubba">
-                                            <img src="img/tm-img-24.jpg" alt="Image" class="img-fluid tm-img">
+                                            <img src="../../static/img/tm-img-24.jpg" alt="Image" class="img-fluid tm-img">
                                             <figcaption>
                                                 <h2 class="tm-figure-title">Picture <span>Eight</span></h2>
                                                 <!--<p class="tm-figure-description">Maecenas purus sem, lobortis id odio in sapien.</p>-->
@@ -353,7 +344,7 @@
                                     </div>  
                                     <div class="grid-item">
                                         <figure class="effect-bubba">
-                                            <img src="img/tm-img-25.jpg" alt="Image" class="img-fluid tm-img">
+                                            <img src="../../static/img/tm-img-25.jpg" alt="Image" class="img-fluid tm-img">
                                             <figcaption>
                                                 <h2 class="tm-figure-title">Picture <span>Nine</span></h2>
                                                 <!--<p class="tm-figure-description">Maecenas purus sem, lobortis id odio in sapien.</p>-->
@@ -363,7 +354,7 @@
                                     </div>  
                                     <div class="grid-item">
                                         <figure class="effect-bubba">
-                                            <img src="img/tm-img-26.jpg" alt="Image" class="img-fluid tm-img">
+                                            <img src="../../static/img/tm-img-26.jpg" alt="Image" class="img-fluid tm-img">
                                             <figcaption>
                                                 <h2 class="tm-figure-title">Picture <span>Ten</span></h2>
                                                 <!--<p class="tm-figure-description">Maecenas purus sem, lobortis id odio in sapien.</p>-->
@@ -373,7 +364,7 @@
                                     </div>  
                                     <div class="grid-item">
                                         <figure class="effect-bubba">
-                                            <img src="img/tm-img-27.jpg" alt="Image" class="img-fluid tm-img">
+                                            <img src="../../static/img/tm-img-27.jpg" alt="Image" class="img-fluid tm-img">
                                             <figcaption>
                                                 <h2 class="tm-figure-title">Picture <span>Eleven</span></h2>
                                                 <!--<p class="tm-figure-description">Maecenas purus sem, lobortis id odio in sapien.</p>-->
@@ -383,7 +374,7 @@
                                     </div>  
                                     <div class="grid-item">
                                         <figure class="effect-bubba">
-                                            <img src="img/tm-img-28.jpg" alt="Image" class="img-fluid tm-img">
+                                            <img src="../../static/img/tm-img-28.jpg" alt="Image" class="img-fluid tm-img">
                                             <figcaption>
                                                 <h2 class="tm-figure-title">Picture <span>Twelve</span></h2>
                                                 <!--<p class="tm-figure-description">Maecenas purus sem, lobortis id odio in sapien.</p>-->
@@ -412,7 +403,7 @@
                                     <!--</div>-->
                                     <div class="grid-item">
                                         <figure class="effect-bubba1">
-                                            <img src="img/tm-img-33.jpg" alt="Image" class="img-fluid tm-img">
+                                            <img src="../../static/img/tm-img-33.jpg" alt="Image" class="img-fluid tm-img">
                                             <!--<figcaption>-->
                                                 <!--<h2 class="tm-figure-title">Picture <span>One</span></h2>-->
                                                 <!--<p class="tm-figure-description">Suspendisse id placerat risus. Mauris quis luctus risus.</p>-->
@@ -422,7 +413,7 @@
                                     </div>
                                     <div class="grid-item">
                                         <figure class="effect-bubba1">
-                                            <img src="img/tm-img-33.jpg" alt="Image" class="img-fluid tm-img">
+                                            <img src="../../static/img/tm-img-33.jpg" alt="Image" class="img-fluid tm-img">
                                             <!--<figcaption>-->
                                                 <!--<h2 class="tm-figure-title">Picture <span>Two</span></h2>-->
                                                 <!--<p class="tm-figure-description">Maecenas purus sem, lobortis id odio in sapien.</p>-->
@@ -432,7 +423,7 @@
                                     </div>
                                     <div class="grid-item">
                                         <figure class="effect-bubba1">
-                                            <img src="img/tm-img-33.jpg" alt="Image" class="img-fluid tm-img">
+                                            <img src="../../static/img/tm-img-33.jpg" alt="Image" class="img-fluid tm-img">
                                             <!--<figcaption>-->
                                                 <!--<h2 class="tm-figure-title">Picture <span>Three</span></h2>-->
                                                 <!--<p class="tm-figure-description">Suspendisse id placerat risus. Mauris quis luctus risus.</p>-->
@@ -442,7 +433,7 @@
                                     </div>
                                     <div class="grid-item">
                                         <figure class="effect-bubba1">
-                                            <img src="img/tm-img-33.jpg" alt="Image" class="img-fluid tm-img">
+                                            <img src="../../static/img/tm-img-33.jpg" alt="Image" class="img-fluid tm-img">
                                             <!--<figcaption>-->
                                                 <!--<h2 class="tm-figure-title">Picture <span>Four</span></h2>-->
                                                 <!--<p class="tm-figure-description">Maecenas purus sem, lobortis id odio in sapien.</p>-->
@@ -452,7 +443,7 @@
                                     </div>
                                     <div class="grid-item">
                                         <figure class="effect-bubba1">
-                                            <img src="img/tm-img-34.jpg" alt="Image" class="img-fluid tm-img">
+                                            <img src="../../static/img/tm-img-34.jpg" alt="Image" class="img-fluid tm-img">
                                             <!--<figcaption>-->
                                                 <!--<h2 class="tm-figure-title">Picture <span>Five</span></h2>-->
                                                 <!--<p class="tm-figure-description">Suspendisse id placerat risus. Mauris quis luctus risus.</p>-->
@@ -462,7 +453,7 @@
                                     </div>
                                     <div class="grid-item">
                                         <figure class="effect-bubba1">
-                                            <img src="img/tm-img-34.jpg" alt="Image" class="img-fluid tm-img">
+                                            <img src="../../static/img/tm-img-34.jpg" alt="Image" class="img-fluid tm-img">
                                             <!--<figcaption>-->
                                                 <!--<h2 class="tm-figure-title">Picture <span>Six</span></h2>-->
                                                 <!--<p class="tm-figure-description">Maecenas purus sem, lobortis id odio in sapien.</p>-->
@@ -472,7 +463,7 @@
                                     </div>
                                     <div class="grid-item">
                                         <figure class="effect-bubba1">
-                                            <img src="img/tm-img-34.jpg" alt="Image" class="img-fluid tm-img">
+                                            <img src="../../static/img/tm-img-34.jpg" alt="Image" class="img-fluid tm-img">
                                             <!--<figcaption>-->
                                                 <!--<h2 class="tm-figure-title">Picture <span>Seven</span></h2>-->
                                                 <!--<p class="tm-figure-description">Suspendisse id placerat risus. Mauris quis luctus risus.</p>-->
@@ -482,7 +473,7 @@
                                     </div>
                                     <div class="grid-item">
                                         <figure class="effect-bubba1">
-                                            <img src="img/tm-img-34.jpg" alt="Image" class="img-fluid tm-img">
+                                            <img src="../../static/img/tm-img-34.jpg" alt="Image" class="img-fluid tm-img">
                                             <!--<figcaption>-->
                                                 <!--<h2 class="tm-figure-title">Picture <span>Eight</span></h2>-->
                                                 <!--<p class="tm-figure-description">Maecenas purus sem, lobortis id odio in sapien.</p>-->
@@ -495,7 +486,7 @@
 
                                     <div class="grid-item">
                                         <figure class="effect-bubba1">
-                                            <img src="img/tm-img-35.jpg" alt="Image" class="img-fluid tm-img">
+                                            <img src="../../static/img/tm-img-35.jpg" alt="Image" class="img-fluid tm-img">
                                             <!--<figcaption>-->
                                             <!--<h2 class="tm-figure-title">Picture <span>Eight</span></h2>-->
                                             <!--<p class="tm-figure-description">Maecenas purus sem, lobortis id odio in sapien.</p>-->
@@ -506,7 +497,7 @@
 
                                     <div class="grid-item">
                                         <figure class="effect-bubba1">
-                                            <img src="img/tm-img-35.jpg" alt="Image" class="img-fluid tm-img">
+                                            <img src="../../static/img/tm-img-35.jpg" alt="Image" class="img-fluid tm-img">
                                             <!--<figcaption>-->
                                             <!--<h2 class="tm-figure-title">Picture <span>Eight</span></h2>-->
                                             <!--<p class="tm-figure-description">Maecenas purus sem, lobortis id odio in sapien.</p>-->
@@ -517,7 +508,7 @@
 
                                     <div class="grid-item">
                                         <figure class="effect-bubba1">
-                                            <img src="img/tm-img-35.jpg" alt="Image" class="img-fluid tm-img">
+                                            <img src="../../static/img/tm-img-35.jpg" alt="Image" class="img-fluid tm-img">
                                             <!--<figcaption>-->
                                             <!--<h2 class="tm-figure-title">Picture <span>Eight</span></h2>-->
                                             <!--<p class="tm-figure-description">Maecenas purus sem, lobortis id odio in sapien.</p>-->
@@ -528,7 +519,7 @@
 
                                     <div class="grid-item">
                                         <figure class="effect-bubba1">
-                                            <img src="img/tm-img-35.jpg" alt="Image" class="img-fluid tm-img">
+                                            <img src="../../static/img/tm-img-35.jpg" alt="Image" class="img-fluid tm-img">
                                             <!--<figcaption>-->
                                             <!--<h2 class="tm-figure-title">Picture <span>Eight</span></h2>-->
                                             <!--<p class="tm-figure-description">Maecenas purus sem, lobortis id odio in sapien.</p>-->
@@ -825,7 +816,7 @@
                                                     </p>
 
                                                 <!-- contact form -->
-                                                <form action="index.html" method="post" class="tm-contact-form">
+                                                <form action="/wishTree/addWish" method="post" class="tm-contact-form">
 
                                                     <!--<div class="form-group">-->
                                                         <!--<input type="text" id="contact_name" name="contact_name" class="form-control" placeholder="Name"  required/>-->
@@ -836,7 +827,7 @@
                                                     <!--</div>                                                        -->
                                                     <!---->
                                                     <div class="form-group">
-                                                        <textarea id="contact_message" name="contact_message" class="form-control" rows="5" placeholder="梦想是要有的，万一实现了呢？" required></textarea>
+                                                        <textarea id="contact_message" name="wishContent" class="form-control" rows="5" placeholder="梦想是要有的，万一实现了呢？" required></textarea>
                                                     </div> 
 
                                                     <button type="submit" class="pull-xs-right tm-submit-btn">提交咯</button>
@@ -874,7 +865,7 @@
                     <!--<a href="#" class="tm-social-link"><i class="fa fa-linkedin"></i></a>-->
                     <p class="tm-copyright-text">2020年07月23号</p>
                 </div>
-
+                
                 <!--<p class="tm-copyright-text">2020年07月23号<a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></p>-->
 
 
@@ -892,11 +883,11 @@
         </div>
         
         <!-- load JS files -->
-        <script src="js/jquery-1.11.3.min.js"></script>         <!-- jQuery (https://jquery.com/download/) -->
-        <script src="js/tether.min.js"></script> <!-- Tether for Bootstrap (http://stackoverflow.com/questions/34567939/how-to-fix-the-error-error-bootstrap-tooltips-require-tether-http-github-h) --> 
-        <script src="js/bootstrap.min.js"></script>             <!-- Bootstrap js (v4-alpha.getbootstrap.com/) -->
-        <script src="js/hero-slider-main.js"></script>          <!-- Hero slider (https://codyhouse.co/gem/hero-slider/) -->
-        <script src="js/jquery.magnific-popup.min.js"></script> <!-- Magnific popup (http://dimsemenov.com/plugins/magnific-popup/) -->
+        <script src="../../static/js/jquery-1.11.3.min.js"></script>         <!-- jQuery (https://jquery.com/download/) -->
+        <script src="../../static/js/tether.min.js"></script> <!-- Tether for Bootstrap (http://stackoverflow.com/questions/34567939/how-to-fix-the-error-error-bootstrap-tooltips-require-tether-http-github-h) -->
+        <script src="../../static/js/bootstrap.min.js"></script>             <!-- Bootstrap js (v4-alpha.getbootstrap.com/) -->
+        <script src="../../static/js/hero-slider-main.js"></script>          <!-- Hero slider (https://codyhouse.co/gem/hero-slider/) -->
+        <script src="../../static/js/jquery.magnific-popup.min.js"></script> <!-- Magnific popup (http://dimsemenov.com/plugins/magnific-popup/) -->
         
         <script>
 

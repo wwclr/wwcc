@@ -21,8 +21,8 @@ import javax.servlet.http.HttpServletRequest;
 @Controller
 @RequestMapping("/userInfor")
 public class UserInforController {
-        @Autowired
-        UserInforImpl userInforImpl;
+//        @Autowired
+//        UserInforImpl userInforImpl;
 
 
         /**

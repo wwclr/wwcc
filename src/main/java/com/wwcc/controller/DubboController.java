@@ -25,4 +25,12 @@ public class DubboController {
         System.out.println("dubbo开始调用");
         return "ceshi";
     }
+
+    @RequestMapping("/toIndex")
+    public String toIndex() {
+        System.out.println("toIndex");
+        return "thymeleaf/index";
+//        modelAndView.setViewName("thymeleaf/index");
+
+    }
 }

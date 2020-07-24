@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wwcc.mapper.WishTreeMapper">
+    <!---->
+    <!--mapper,Entity对应数据库字段（colum）-->
+    <resultMap id="BaseResultMap" type="com.wwcc.entity.WishTree">
+        <!--
+          WARNING - @mbg.generated
+        -->
+        <!--关联数据库，对应字段-->
+        <result column="id" jdbcType="INTEGER" property="id" />
+        <result column="wishContent" jdbcType="VARCHAR" property="wishContent" />
+        <result column="status" jdbcType="TINYINT" property="status"/>
+        <result column="createTime" jdbcType="TIMESTAMP" property="createTime"/>
+    </resultMap>
+
+    <!--方法：sql语句，id：方法名（关联mapper中的方法） 返回类型：resultMap,resultType ???;参数类型：param???-->
+    <!--<select id="findAllManageTicket" resultType="com.ticket.entity.ManageInfor">&#45;&#45; -->
+
+    <!--<select id="findByUser_phone_numAndUser_password" resultMap="BaseResultMap">&#45;&#45;-->
+        <!--<![CDATA[-->
+<!--SELECT * FROM user_infor WHERE user_phone_num=#{user_phone_num} AND user_password=#{user_password}-->
+ <!--]]>-->
+    <!--</select>-->
+
+    <insert id="addWish" parameterType="com.wwcc.entity.WishTree">--
+        <![CDATA[
+INSERT INTO wish_tree(wishContent,createTime,status)
+    VALUES (#{wishTree.wishContent},#{wishTree.createTime},#{wishTree.status})]]>
+    </insert>
+
+
+</mapper>
