@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -836,9 +836,31 @@
                                             </div>
 
                                             <div class="tm-bg-white-translucent text-xs-left tm-textbox tm-2-col-textbox-2 tm-textbox-padding tm-textbox-padding-contact">
-                                                <h2 class="tm-contact-info">呀呀呀呀</h2>
+                                                <!--<h2 class="tm-contact-info">呀呀呀呀</h2>-->
                                                 <!-- google map goes here -->
-                                                <div id="google-map"></div>
+                                                <div id="google-map">
+                                                    <!--<tr th:each="wishTree:${wishTreeList}">-->
+                                                    <!--<td><h2 class="tm-contact-info" th:text="${wishTree.id}"></h2></td>-->
+                                                    <!--<td><h2 class="tm-contact-info" th:text="${wishTree.wishContent}"></h2></td>-->
+                                                    <!--<td><h2 class="tm-contact-info" th:text="${wishTree.createTime}"></h2></td>-->
+                                                    <!--<td><h2 class="tm-contact-info" th:text="${wishTree.status}"></h2></td>-->
+                                                    <!--</tr>-->
+
+                                                    <table class="table table-bordered agileinfo">
+                                                        <tr>
+                                                            <th>序号</th>
+                                                            <th>内容</th>
+                                                            <th>创建时间</th>
+                                                            <th>状态</th>
+                                                        </tr>
+                                                    <tr th:each="wishTree:${wishTreeList}">
+                                                        <td th:text="${wishTree.id}"></td>
+                                                        <td th:text="${wishTree.wishContent}"></td>
+                                                        <td th:text="${wishTree.createTimeString}"></td>
+                                                        <td th:text="${wishTree.statusText}"></td>
+                                                    </tr>
+                                                    </table>
+                                                </div>
                                             </div>
 
                                         </div>

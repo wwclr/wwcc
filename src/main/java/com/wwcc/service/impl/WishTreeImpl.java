@@ -9,6 +9,8 @@ import com.wwcc.utils.BaseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 
 @Service("wishTreeImpl")
 public class WishTreeImpl extends BaseService implements WishTreeInterface {
@@ -22,13 +24,9 @@ public class WishTreeImpl extends BaseService implements WishTreeInterface {
                 wishTreeMapper.addWish(wishTree);
         }
 
-
-//        @Override
-//        public UserInforVo findByUser_phone_numAndUser_password(String user_phone_num, String user_password) {
-//                UserInfor userInfor=userInforMapper.findByUser_phone_numAndUser_password(user_phone_num,user_password);
-//                UserInforVo userInforVo=transferObjectIgnoreCase(userInfor,UserInforVo.class);
-//                return userInforVo;
-//        }
-
+        @Override
+        public List<WishTree> findAllWish() {
+                return wishTreeMapper.findAllWish();
+        }
 
 }

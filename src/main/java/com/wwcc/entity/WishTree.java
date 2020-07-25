@@ -21,6 +21,26 @@ public class WishTree implements Serializable{
 
         private Integer status;
 
+        private String createTimeString;
+
+        private String statusText;
+
+        public String getCreateTimeString() {
+                return createTimeString;
+        }
+
+        public void setCreateTimeString(String createTimeString) {
+                this.createTimeString = createTimeString;
+        }
+
+        public String getStatusText() {
+                return statusText;
+        }
+
+        public void setStatusText(String statusText) {
+                this.statusText = statusText;
+        }
+
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
         @Column(name = "id")

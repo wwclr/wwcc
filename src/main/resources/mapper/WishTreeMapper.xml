@@ -30,4 +30,13 @@ INSERT INTO wish_tree(wishContent,createTime,status)
     </insert>
 
 
+
+    <select id="findAllWish" resultMap="BaseResultMap">--
+    <![CDATA[
+    SELECT * FROM wish_tree
+    ]]>
+    </select>
+
+
+
 </mapper>
