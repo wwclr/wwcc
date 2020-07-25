@@ -50,6 +50,12 @@ public class UserInforController {
                 return modelAndView;
         }
 
+        @RequestMapping("/login")
+        public String login() {
+                return "index";
+        }
+
+
 //        /**
 //         *  查询用户的登录信息
 //         * @param request

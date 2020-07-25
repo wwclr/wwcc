@@ -41,7 +41,7 @@ public class WishTreeController {
             });
         }
         modelAndView.addObject("wishTreeList",wishTreeList);
-        modelAndView.setViewName("thymeleaf/index");
+        modelAndView.setViewName("index");
         return modelAndView;
     }
     @RequestMapping("/findAllWish")
@@ -55,7 +55,7 @@ public class WishTreeController {
             });
         }
         modelAndView.addObject("wishTreeList",wishTreeList);
-        modelAndView.setViewName("thymeleaf/index");
+        modelAndView.setViewName("index");
         return modelAndView;
     }
 }

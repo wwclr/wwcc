@@ -29,7 +29,7 @@ public class DubboController {
     @RequestMapping("/toIndex")
     public String toIndex() {
         System.out.println("toIndex");
-        return "thymeleaf/index";
+        return "index";
 //        modelAndView.setViewName("thymeleaf/index");
 
     }
