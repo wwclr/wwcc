@@ -2,6 +2,7 @@ package com.wwcc.controller;
 
 import com.alibaba.fastjson.JSONObject;
 import com.wwcc.entity.UserInfor;
+import com.wwcc.entity.WishTree;
 import com.wwcc.service.impl.UserInforImpl;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 /**
  * mybatis对应数据库用户信息表与entity
@@ -21,8 +23,11 @@ import javax.servlet.http.HttpServletRequest;
 @Controller
 @RequestMapping("/userInfor")
 public class UserInforController {
-//        @Autowired
-//        UserInforImpl userInforImpl;
+        @Autowired
+        UserInforImpl userInforImpl;
+
+        @Autowired
+        WishTreeController wishTreeController;
 
 
         /**
@@ -56,31 +61,24 @@ public class UserInforController {
         }
 
 
-//        /**
-//         *  查询用户的登录信息
-//         * @param request
-//         * @return
-//         */
-//        @RequestMapping("/findByUser_phone_numAndUser_password")
-//        public ModelAndView findByUser_phone_numAndUser_password(HttpServletRequest request) {
-//                ModelAndView modelAndView = new ModelAndView();
-//                String user_phone_num=request.getParameter("user_phone_num");
-//                String user_password=request.getParameter("user_password");
-//
-//                String userString=redisService.findName(user_phone_num.toString());
-//                UserInforVo userInforVo;
-//                if(StringUtils.isNotEmpty(userString)) {
-//                        userInforVo = JSONObject.parseObject(userString, UserInforVo.class);
-//                }else{
-//                       userInforVo =userInforImpl.findByUser_phone_numAndUser_password(user_phone_num,user_password);
-//                        if(!ObjectUtils.isEmpty(userInforVo)){
-//                                redisService.setNameValue(userInforVo.getUser_phone_num().toString(),JSONObject.toJSONString(userInforVo));
-//                        }
-//                }
-//                if(!ObjectUtils.isEmpty(userInforVo)){
-//                        modelAndView.addObject("userInforVo",userInforVo);
-//                        modelAndView.setViewName("index");
-//                }else {modelAndView.setViewName("error");}
-//                return modelAndView;
-//        }
+        /**
+         *  查询用户的登录信息
+         * @param request
+         * @return
+         */
+        @RequestMapping("/findByUser_phone_numAndUser_password")
+        public ModelAndView findByUser_phone_numAndUser_password(HttpServletRequest request) {
+                ModelAndView modelAndView = new ModelAndView();
+                String user_phone_num=request.getParameter("user_phone_num");
+                String user_password=request.getParameter("user_password");
+
+                UserInfor userInforVo =userInforImpl.findByUser_phone_numAndUser_password(user_phone_num,user_password);
+                if(!ObjectUtils.isEmpty(userInforVo)){
+                        modelAndView.addObject("userInforVo",userInforVo);
+                        modelAndView.setViewName("index");
+                        List<WishTree> wishTreeList=wishTreeController.findAllWishCommon();
+                        modelAndView.addObject("wishTreeList",wishTreeList);
+                }else {modelAndView.setViewName("error");}
+                return modelAndView;
+        }
 }

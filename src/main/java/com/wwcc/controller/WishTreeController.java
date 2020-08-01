@@ -32,14 +32,14 @@ public class WishTreeController {
         wishTree1.setCreateTime(new Date());
         wishTree1.setStatus(0);
         wishTreeImpl.addWish(wishTree1);
-
-        List<WishTree> wishTreeList=wishTreeImpl.findAllWish();
-        if(!CollectionUtils.isEmpty(wishTreeList)){
-            wishTreeList.stream().forEach(e->{
-                e.setStatusText(new Integer(2).equals(e.getStatus())?"已实现":"未实现");
-                e.setCreateTimeString(DateUtil.format(e.getCreateTime(),DateUtil.DATEFORMATSECOND));
-            });
-        }
+        List<WishTree> wishTreeList=findAllWishCommon();
+//        List<WishTree> wishTreeList=wishTreeImpl.findAllWish();
+//        if(!CollectionUtils.isEmpty(wishTreeList)){
+//            wishTreeList.stream().forEach(e->{
+//                e.setStatusText(new Integer(2).equals(e.getStatus())?"已实现":"未实现");
+//                e.setCreateTimeString(DateUtil.format(e.getCreateTime(),DateUtil.DATEFORMATSECOND));
+//            });
+//        }
         modelAndView.addObject("wishTreeList",wishTreeList);
         modelAndView.setViewName("index");
         return modelAndView;
@@ -47,15 +47,31 @@ public class WishTreeController {
     @RequestMapping("/findAllWish")
     public ModelAndView findAllWish(){
         ModelAndView modelAndView=new ModelAndView();
+        List<WishTree> wishTreeList=findAllWishCommon();
+//        List<WishTree> wishTreeList=wishTreeImpl.findAllWish();
+//        if(!CollectionUtils.isEmpty(wishTreeList)){
+//            wishTreeList.stream().forEach(e->{
+//                e.setStatusText(new Integer(2).equals(e.getStatus())?"已实现":"未实现");
+//                e.setCreateTimeString(DateUtil.format(e.getCreateTime(),DateUtil.DATEFORMATSECOND));
+//            });
+//        }
+        modelAndView.addObject("wishTreeList",wishTreeList);
+        modelAndView.setViewName("index");
+        return modelAndView;
+    }
+
+
+    @RequestMapping("/findAllWishCommon")
+    @ResponseBody
+    public  List<WishTree> findAllWishCommon(){
         List<WishTree> wishTreeList=wishTreeImpl.findAllWish();
         if(!CollectionUtils.isEmpty(wishTreeList)){
             wishTreeList.stream().forEach(e->{
                 e.setStatusText(new Integer(2).equals(e.getStatus())?"已实现":"未实现");
                 e.setCreateTimeString(DateUtil.format(e.getCreateTime(),DateUtil.DATEFORMATSECOND));
             });
-        }
-        modelAndView.addObject("wishTreeList",wishTreeList);
-        modelAndView.setViewName("index");
-        return modelAndView;
+        };
+        return wishTreeList;
     }
+
 }

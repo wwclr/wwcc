@@ -1,14 +1,15 @@
 package com.wwcc.service.impl;
 
-import com.alibaba.dubbo.config.annotation.Service;
 
+import com.wwcc.entity.UserInfor;
 import com.wwcc.mapper.UserInforMapper;
 import com.wwcc.service.UserInforInterface;
 import com.wwcc.utils.BaseService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 
-@Service
+@Service("userInforImpl")
 public class UserInforImpl extends BaseService implements UserInforInterface {
 
         @Autowired//调用mapper，通过调用mapper中的方法，向数据库操作，完成功能
@@ -31,12 +32,11 @@ public class UserInforImpl extends BaseService implements UserInforInterface {
          * @param user_password  登录密码
          * @return
          */
-//        @Override
-//        public UserInforVo findByUser_phone_numAndUser_password(String user_phone_num, String user_password) {
-//                UserInfor userInfor=userInforMapper.findByUser_phone_numAndUser_password(user_phone_num,user_password);
-//                UserInforVo userInforVo=transferObjectIgnoreCase(userInfor,UserInforVo.class);
-//                return userInforVo;
-//        }
+        @Override
+        public UserInfor findByUser_phone_numAndUser_password(String user_phone_num, String user_password) {
+                UserInfor userInfor=userInforMapper.findByUser_phone_numAndUser_password(user_phone_num,user_password);
+                return userInfor;
+        }
 
 
 }
