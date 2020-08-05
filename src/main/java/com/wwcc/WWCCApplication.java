@@ -8,7 +8,8 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.ImportResource;
 import tk.mybatis.spring.annotation.MapperScan;
 
-@ImportResource(locations = {"classpath:spring-mybatis.xml"})
+//@ImportResource(locations = {"classpath:spring-mybatis.xml"})
+@ImportResource(locations = {"classpath:spring.xml"})
 @MapperScan(basePackages = "com.wwcc.mapper")
 @ComponentScan(basePackages ={"com.wwcc.service","com.wwcc.controller"} )
 @SpringBootApplication
