@@ -2,20 +2,13 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
 	   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
 	<bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" init-method="init" destroy-method="close">
-		<!--<property name="url" value="jdbc:mysql://ngaribatainner.mysql.rds.aliyuncs.com:3306/eh_base_devtest?useUnicode=true&amp;characterEncoding=utf-8" />-->
-		<!--<property name="username" value="dev_deploy" />-->
-		<!--<property name="password" value="RRWP5g5XGTR8pUcmI52FrunK6PHL0kihZoBUjCScI8mo4lvc6+0tmZSdaEP0QXuPXyR0T59hZbuAtoXaRFqBBQ==" />-->
-
-
 		<property name="url" value="jdbc:mysql://localhost:3306/online-ticket?serverTimezone=GMT" />
 		<property name="username" value="root" />
 		<property name="password" value="ww5201314" />
-
-
 		<!--<property name="filters" value="stat,config,log4j" />-->
 		<!--<property name="connectionProperties" value="config.decrypt=true;druid.stat.slowSqlMillis=3000;druid.stat.logSlowSql=true" />-->
-
 		<property name="maxActive" value="600" />
 		<property name="initialSize" value="2" />
 		<property name="maxWait" value="60000" />
@@ -33,6 +26,32 @@
 		<!--<property name="removeAbandonedTimeout" value="1800" /> &lt;!&ndash; 1800秒，也就是30分钟 &ndash;&gt;-->
 		<!--<property name="logAbandoned" value="true" /> &lt;!&ndash; 关闭abanded连接时输出错误日志 &ndash;&gt;-->
 	</bean>
+
+
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="mapperLocations">
+			<list>
+				<value>classpath:mapper/*.xml</value>
+			</list>
+		</property>
+
+		<property name="plugins">
+			<list>
+				<bean class="com.wwcc.utils.MybatisInterceptor"></bean>
+			</list>
+		</property>
+	</bean>
+
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="basePackage" value="com.wwcc.mapper" />
+		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />
+	</bean>
+	<bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate" scope="prototype">
+		<constructor-arg index="0" ref="sqlSessionFactory" />
+	</bean>
+
+
 
 	<!--<bean id="mySessionFactory" class="ctd.persistence.support.hibernate.MyLocalSessionFactoryBean">-->
 		<!--<property name="dataSource" ref="dataSource" />-->
