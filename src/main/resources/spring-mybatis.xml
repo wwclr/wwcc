@@ -19,6 +19,11 @@
 		<property name="testWhileIdle" value="true" />
 		<property name="testOnBorrow" value="false" />
 		<property name="testOnReturn" value="false" />
+		<property name="proxyFilters">
+			<list>
+				<bean class="com.wwcc.utils.ExecuteSqlFilter"/>
+			</list>
+		</property>
 		<!--<property name="poolPreparedStatements" value="true" />-->
 		<!--<property name="maxPoolPreparedStatementPerConnectionSize" value="20" />-->
 
@@ -28,28 +33,28 @@
 	</bean>
 
 
-	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
-		<property name="dataSource" ref="dataSource" />
-		<property name="mapperLocations">
-			<list>
-				<value>classpath:mapper/*.xml</value>
-			</list>
-		</property>
+	<!--<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">-->
+		<!--<property name="dataSource" ref="dataSource" />-->
+		<!--<property name="mapperLocations">-->
+			<!--<list>-->
+				<!--<value>classpath:mapper/*.xml</value>-->
+			<!--</list>-->
+		<!--</property>-->
 
-		<property name="plugins">
-			<list>
-				<bean class="com.wwcc.utils.MybatisInterceptor"></bean>
-			</list>
-		</property>
-	</bean>
+		<!--<property name="plugins">-->
+			<!--<list>-->
+				<!--<bean class="com.wwcc.utils.MybatisInterceptor"></bean>-->
+			<!--</list>-->
+		<!--</property>-->
+	<!--</bean>-->
 
-	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="com.wwcc.mapper" />
-		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />
-	</bean>
-	<bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate" scope="prototype">
-		<constructor-arg index="0" ref="sqlSessionFactory" />
-	</bean>
+	<!--<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">-->
+		<!--<property name="basePackage" value="com.wwcc.mapper" />-->
+		<!--<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />-->
+	<!--</bean>-->
+	<!--<bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate" scope="prototype">-->
+		<!--<constructor-arg index="0" ref="sqlSessionFactory" />-->
+	<!--</bean>-->
 
 
 

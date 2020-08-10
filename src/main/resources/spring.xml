@@ -23,6 +23,4 @@
             <aop:after pointcut-ref="logAction" method="after"/>
         </aop:aspect>
     </aop:config>
-
-
     </beans>
